@@ -1,6 +1,6 @@
 package com.authorization.jwt.security.jwt;
 
-import com.authorization.jwt.controllers.Role;
+import com.authorization.jwt.entities.Role;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,9 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import sun.security.util.Password;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;

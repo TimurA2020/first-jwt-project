@@ -1,6 +1,6 @@
 package com.authorization.jwt.repo;
 
-import com.authorization.jwt.controllers.User;
+import com.authorization.jwt.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

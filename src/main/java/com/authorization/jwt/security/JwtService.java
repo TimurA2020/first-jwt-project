@@ -1,6 +1,6 @@
 package com.authorization.jwt.security;
 
-import com.authorization.jwt.controllers.User;
+import com.authorization.jwt.entities.User;
 import com.authorization.jwt.security.jwt.JwtUser;
 import com.authorization.jwt.security.jwt.JwtUserFactory;
 import com.authorization.jwt.service.UserService;

@@ -1,9 +1,8 @@
 package com.authorization.jwt.service;
 
-import com.authorization.jwt.controllers.User;
+import com.authorization.jwt.entities.User;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserService {
     User registerUser(User user);

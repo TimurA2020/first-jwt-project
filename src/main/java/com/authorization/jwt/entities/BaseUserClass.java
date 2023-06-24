@@ -1,4 +1,4 @@
-package com.authorization.jwt.controllers;
+package com.authorization.jwt.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

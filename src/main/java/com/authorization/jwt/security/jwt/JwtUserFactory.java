@@ -1,8 +1,8 @@
 package com.authorization.jwt.security.jwt;
 
-import com.authorization.jwt.controllers.Role;
-import com.authorization.jwt.controllers.Status;
-import com.authorization.jwt.controllers.User;
+import com.authorization.jwt.entities.Role;
+import com.authorization.jwt.entities.Status;
+import com.authorization.jwt.entities.User;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

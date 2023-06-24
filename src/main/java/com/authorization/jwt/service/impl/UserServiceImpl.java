@@ -1,20 +1,18 @@
 package com.authorization.jwt.service.impl;
 
-import com.authorization.jwt.controllers.Role;
-import com.authorization.jwt.controllers.Status;
-import com.authorization.jwt.controllers.User;
+import com.authorization.jwt.entities.Role;
+import com.authorization.jwt.entities.Status;
+import com.authorization.jwt.entities.User;
 import com.authorization.jwt.repo.RoleRepo;
 import com.authorization.jwt.repo.UserRepo;
 import com.authorization.jwt.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
