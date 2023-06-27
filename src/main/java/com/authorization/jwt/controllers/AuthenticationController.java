@@ -10,6 +10,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,23 +21,22 @@ import java.util.Hashtable;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/auth/")
 @RequiredArgsConstructor
 public class AuthenticationController {
 
     private final AuthenticationManager authenticationManager;
-
     private final JwtTokenProvider jwtTokenProvider;
-
     private final UserService userService;
 
+    @PostMapping("login")
     public ResponseEntity login(@RequestBody AuthDto authDto) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authDto.getUsername(), authDto.getPassword()));
             User user = userService.getByUsername(authDto.getUsername());
             if (user == null) {
-                throw new UsernameNotFoundException("User was not found");
+                throw new UsernameNotFoundException("User " + authDto.getUsername() + " was not found");
             }
             String token = jwtTokenProvider.createToken(authDto.getUsername(), user.getRoles());
 
